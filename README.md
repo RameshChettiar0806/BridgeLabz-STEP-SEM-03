@@ -30,15 +30,6 @@ javac "Weeks\Week 4\Lab Problems\Program2\*.java"
 java -cp "Weeks\Week 4\Lab Problems\Program2" Program2
 ```
 
-Notes and troubleshooting:
-- If the Java files declare a package (a `package` line at the top), compile from the repository root and run using the package-qualified class name, e.g. `java -cp . com.example.Program2`.
-- If you see "class not found" errors, verify the `.class` files exist in the target folder and you used the correct class name and classpath.
-- For multi-folder projects, you can compile recursively using `Get-ChildItem -Recurse -Filter "*.java" | ForEach-Object { $_.FullName } | %{ javac $_ }` but compiling with `javac path\to\folder\*.java` is simpler when all sources for the example are in one directory.
-
-Notes:
-- If classes are part of packages, compile from the repository root and use the package-qualified class name with `java`.
-- For multi-file projects, compile using `javac` with wildcards or list all source files, e.g. `javac Weeks\Week1\Homework\*.java`.
-
 ## Project structure (high level)
 - `Weeks/Week 1/` — Homework, Lab, Notes, Problems
 - `Weeks/Week 2/` — Assignment-HW, Lab, Notes, Practise Problems
