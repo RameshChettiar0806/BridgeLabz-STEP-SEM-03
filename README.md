@@ -1,4 +1,4 @@
-# BridgeLabz-STEP-SEM-03 — Java Step (Semester 3)
+# BridgeLabz-STEP-SEM-03 — Java STEP (Semester 3)
 
 This repository contains Java exercises, lab problems, assignments and notes for Semester 3 (Java Step). The files are organized by week under the `Weeks/` directory.
 
@@ -10,18 +10,30 @@ This repository contains Java exercises, lab problems, assignments and notes for
 ## Quickstart (Windows PowerShell)
 Prerequisites: JDK 8 or later installed and `java`/`javac` available on PATH.
 
-To compile a Java file (example: Program2 in Week 4 Lab Problems):
+To compile and run the example program `Program2` (Week 4 Lab Problems) do the following.
+
+1) From PowerShell change to the repository root:
 
 ```powershell
-# change to repo root first
 Set-Location -Path 'c:\Users\Ramesh\Personal Folders\MISCELLANEOUS\ENTRANCE EXAMS\SRM\SEMESTERS\SEMESTER-3\JAVA-STEP'
+```
 
-# compile (adjust path to the .java file)
-javac "Weeks\Week 4\Lab Problems\Program2\Program2.java"
+2) Compile all source files that belong to the example (this ensures dependent classes in the same folder are compiled):
 
-# run (use the fully-qualified class name or path; run from the directory containing the compiled .class file)
+```powershell
+javac "Weeks\Week 4\Lab Problems\Program2\*.java"
+```
+
+3) Run the program (no package declared in the example sources). Use the folder containing the compiled classes on the classpath and the top-level class name:
+
+```powershell
 java -cp "Weeks\Week 4\Lab Problems\Program2" Program2
 ```
+
+Notes and troubleshooting:
+- If the Java files declare a package (a `package` line at the top), compile from the repository root and run using the package-qualified class name, e.g. `java -cp . com.example.Program2`.
+- If you see "class not found" errors, verify the `.class` files exist in the target folder and you used the correct class name and classpath.
+- For multi-folder projects, you can compile recursively using `Get-ChildItem -Recurse -Filter "*.java" | ForEach-Object { $_.FullName } | %{ javac $_ }` but compiling with `javac path\to\folder\*.java` is simpler when all sources for the example are in one directory.
 
 Notes:
 - If classes are part of packages, compile from the repository root and use the package-qualified class name with `java`.
@@ -39,7 +51,7 @@ If you want to add or update problems, please:
 3. Include a short comment at the top of new files describing the program purpose.
 
 ## License
-See `Weeks/LICENCE` or `Weeks/LICENSE` for license details (if present). If you need a different license, add it at the repository root and update this section.
+See `LICENCE` for license details (if present). If you need a different license, add it at the repository root and update this section.
 
 ## Contact
-For questions about the exercises or structure, Send an email to rc1066@srmist.edu.in
+For questions about the exercises or structure, send an email to rc1066@srmist.edu.in
