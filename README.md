@@ -42,4 +42,4 @@ If you want to add or update problems, please:
 See `Weeks/LICENCE` or `Weeks/LICENSE` for license details (if present). If you need a different license, add it at the repository root and update this section.
 
 ## Contact
-For questions about the exercises or structure, update the repository or leave a note in a file inside `Word Documents/` with contact details.
+For questions about the exercises or structure, Send an email to rc1066@srmist.edu.in
