@@ -1,0 +1,8 @@
+# Ignore Word Documents (.docx) stored in the Word Documents folder
+Word Documents/**/*.docx
+Word Documents/*.docx
+
+# Common OS/editor files (optional)
+Thumbs.db
+.DS_Store
+.vscode/
